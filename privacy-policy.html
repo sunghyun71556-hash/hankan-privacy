@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>한 칸 가계부 개인정보처리방침</title>
+  <style>
+    :root { color-scheme: light; font-family: system-ui, -apple-system, "Noto Sans KR", sans-serif; color: #30322f; background: #f7f7f3; }
+    body { margin: 0; }
+    main { box-sizing: border-box; max-width: 760px; margin: 0 auto; padding: 40px 24px 72px; background: #fff; min-height: 100vh; }
+    h1 { margin: 0 0 8px; font-size: 2rem; line-height: 1.3; }
+    h2 { margin-top: 36px; font-size: 1.25rem; }
+    p, li { line-height: 1.75; }
+    .effective { color: #666b64; margin-bottom: 32px; }
+    a { color: #354f3d; }
+    @media (max-width: 520px) { main { padding: 28px 20px 56px; } h1 { font-size: 1.65rem; } }
+  </style>
+</head>
+<body>
+<main>
+  <h1>한 칸 가계부 개인정보처리방침</h1>
+  <p class="effective">시행일: 2026년 9월 11일</p>
+  <p>한 칸 가계부의 운영자는 <strong>hyuns</strong>입니다. 개인정보 관련 문의는 <a href="mailto:sunghyun71556@gmail.com">sunghyun71556@gmail.com</a>으로 연락해 주세요.</p>
+
+  <h2>1. 처리하는 정보와 목적</h2>
+  <p>한 칸 가계부는 사용자가 직접 입력한 거래 금액·일자·사용처·지역·메모·분류·결제수단·예산과, 사용자가 선택적으로 불러온 금융 문자·알림·사진 인식 결과를 기기 내에서 가계부 작성에 이용합니다.</p>
+  <ul>
+    <li><strong>금융 문자 자동 수집:</strong> 별도 동의와 SMS 권한을 받은 뒤 신규 SMS의 본문·발신번호·수신 시각을 확인하고 금융 거래로 판정한 후보를 저장합니다.</li>
+    <li><strong>최근 금융 문자 가져오기:</strong> 사용자가 요청할 때 최근 한 달의 SMS 수신함을 조회합니다. 금융 판정을 위해 비금융 문자를 메모리에서 확인할 수 있으나 금융 거래로 판정하지 않은 문자는 앱 데이터베이스에 저장하지 않습니다.</li>
+    <li><strong>금융 알림:</strong> 별도 동의와 Android 알림 접근 허용 후 알림 제목·본문·발신 앱 패키지명·수신 시각을 확인합니다. 대화형 알림은 메시지별로 판정하고 금융 거래로 판정한 메시지만 저장합니다. 자동 판정에는 오류가 있을 수 있습니다.</li>
+    <li><strong>대략적인 위치:</strong> 사용자가 현재 위치를 요청할 때 거래 지역명을 채우는 데 이용합니다. 지속적인 백그라운드 위치 추적은 하지 않습니다.</li>
+    <li><strong>사진 인식:</strong> 사용자가 선택한 사진에 기기 내 문자 인식을 실행하고 사용자가 확인한 거래·상품 정보를 저장합니다.</li>
+    <li><strong>실행 가능한 앱 목록:</strong> 알림 템플릿의 앱 선택 화면을 열 때만 조회합니다. 선택한 앱의 이름과 패키지명은 저장하지만 전체 앱 목록은 저장하지 않습니다.</li>
+  </ul>
+
+  <h2>2. 외부 서비스 및 제3자 처리</h2>
+  <p>개발자 서버로 금융자료를 업로드하는 기능, 회원가입, 광고 SDK 및 클라우드 자동 동기화는 없습니다. 다만 운영체제와 포함된 SDK의 통신까지 전혀 없다는 의미는 아닙니다.</p>
+  <p>사진 인식에는 Google ML Kit가 포함됩니다. 입력 사진과 인식 결과는 기기에서 처리되지만 SDK는 기기·앱 정보, 설치별 식별자, 성능·오류·API 설정 등 진단정보를 Google에 전송할 수 있습니다. <a href="https://developers.google.com/ml-kit/android-data-disclosure">ML Kit 데이터 공개 안내</a>와 <a href="https://developers.google.com/ml-kit/terms">ML Kit 약관</a>을 확인해 주세요.</p>
+  <p>지역명 변환에는 기기의 Android 위치·주소 제공자가 이용될 수 있습니다. 백업 파일 제공자로 클라우드 저장 위치를 선택하면 해당 제공자의 개인정보처리방침이 적용됩니다.</p>
+
+  <h2>3. 보관 기간</h2>
+  <ul>
+    <li>거래·예산·카테고리·결제수단·템플릿 및 미등록 거래 후보: 사용자가 삭제하거나 앱 저장공간을 삭제할 때까지</li>
+    <li>등록·무시·중복 처리된 알림: 처리 후 최대 30일</li>
+    <li>인식 오류 확인용 진단 자료: 생성 후 최대 90일</li>
+    <li>알림 서비스 연결 진단 로그: 금융 알림 본문 없이 앱·기기 버전, 권한·컴포넌트·배터리 최적화 상태, 재연결 요청·연결 콜백·실패 코드만 최근 30일, 최대 200건 기기 내 보관. 앱 메뉴에서 확인·공유·삭제 가능</li>
+    <li>복원 전 및 이전 가계부 가져오기 전 안전 백업: 종류별 최근 3개, 최대 30일</li>
+    <li>직접 내보낸 백업 파일과 원본 사진: 사용자가 저장 위치에서 직접 삭제할 때까지</li>
+  </ul>
+
+  <h2>4. 삭제와 권리</h2>
+  <p>개별 거래와 가져온 알림은 앱에서 삭제하거나 무시할 수 있습니다. Android 설정에서 권한을 해제하면 이후 접근은 중단되지만 이미 저장된 자료는 자동 삭제되지 않습니다. 전체 로컬 자료와 동의 기록은 앱 저장공간 삭제 또는 앱 제거로 삭제할 수 있으며 복구할 수 없습니다. 별도 계정이 없어 회원 탈퇴 절차는 없습니다.</p>
+  <p>SMS·알림·위치 접근을 허용하지 않아도 거래를 수동으로 입력할 수 있습니다.</p>
+
+  <h2>5. 안전한 이용</h2>
+  <p>앱 저장소는 Android 앱 격리 영역을 사용하지만 별도 데이터베이스 암호화를 제공하지 않습니다. 내보낸 백업은 평문 JSON 파일이므로 신뢰할 수 있는 위치에 보관하고 공개적으로 공유하지 마세요.</p>
+
+  <h2>6. 방침 변경</h2>
+  <p>처리 기능, 보관기간 또는 외부 SDK가 변경되면 이 방침과 앱 내 안내를 업데이트합니다. 중요한 변경은 적용 전에 앱 또는 공개 방침 페이지에서 알립니다.</p>
+</main>
+</body>
+</html>
